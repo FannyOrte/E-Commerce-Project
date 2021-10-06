@@ -5,7 +5,7 @@ export const getProductRequest =
   async (): Promise<ProductRequestReturnType> => {
     try {
       const response = await fetch(
-        `https://api.bestbuy.com/v1/products((categoryPath.id=abcat0204000))?apiKey=${API_KEY}&sort=name.asc&show=name,image,regularPrice,sku&format=json`,
+        `https://api.bestbuy.com/v1/products((categoryPath.id=abcat0204000))?apiKey=${API_KEY}&sort=name.asc&show=name,image,regularPrice,sku&pageSize=25&format=json`,
         {
           method: "GET",
           mode: "cors",
