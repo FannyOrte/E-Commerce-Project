@@ -1,9 +1,3 @@
-type CategoryType = "HeadPhones" | "Laptops";
-
-export interface ProductRequestArgs {
-  category: CategoryType;
-}
-
 export interface ProductMeta {
   name: string;
   image: string;
@@ -11,4 +5,4 @@ export interface ProductMeta {
   sku: number;
 }
 
-export type ProductRequestReturnType = ProductMeta[];
+export type ProductRequestReturnType = ProductMeta[] | null;
