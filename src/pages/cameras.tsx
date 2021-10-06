@@ -4,13 +4,12 @@ import { ProductRequestReturnType } from "../api/BestBuy/BestBuy.types";
 import ProductTableComponent from "../components/ProductTable/ProductTable.component";
 import HeaderComponent from "../components/Header/Header.component";
 
-const ProductsPage = () => {
+const CamerasPage = () => {
   const [products, setProducts] = useState<ProductRequestReturnType>(null);
 
   useEffect(() => {
     const sendRequest = async () => {
-      const result = await getProductRequest();
-      console.log(result);
+      const result = await getProductRequest("cameras");
       setProducts(result);
     };
 
@@ -27,4 +26,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default CamerasPage;
