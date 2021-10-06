@@ -3,18 +3,20 @@ import { breakpoints } from "../../globals/breakpoints";
 
 export const ImgStyle = styled.img`
   max-width: 100%;
-  padding: 0.5rem;
 `;
 
-export const DivStyle = styled.div`
-  width: 15%;
-  padding: 0 0.7rem;
+export const CardContainerStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 0.7rem;
   border: 1px solid #ddd;
-  margin-bottom: 1rem;
+  width: 20%;
   @media screen and (max-width: ${breakpoints.me}) {
-    width: 40%;
+    width: 50%;
   }
   @media screen and (max-width: ${breakpoints.sm}) {
-    width: 80%;
+    width: 100%;
   }
 `;
