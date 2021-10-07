@@ -1,5 +1,5 @@
-import { ProductMeta } from "../../api/BestBuy/BestBuy.types";
+import { IProductMeta } from "../../providers/Commerce/Commers.types";
 
-export interface ProductTableComponentArgs {
-  products: ProductMeta[];
+export interface IProductTableComponentArgs {
+  products: IProductMeta[];
 }

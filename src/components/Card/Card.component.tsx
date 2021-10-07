@@ -2,13 +2,13 @@ import React from "react";
 import { CardComponentArgs } from "./Card.types";
 import { ImgStyle, CardContainerStyle } from "./Card.styles";
 
-const CardComponent = ({ name, regularPrice, image }: CardComponentArgs) => {
+const CardComponent = ({ name, price, image }: CardComponentArgs) => {
   return (
     <CardContainerStyle>
       <ImgStyle src={image} />
       <div>
         <p>{name}</p>
-        <p>{regularPrice}$</p>
+        <p>{price}</p>
       </div>
     </CardContainerStyle>
   );
