@@ -3,12 +3,16 @@ import { Link } from "gatsby";
 
 export const DivStyle = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 10px;
+  justify-content: flex-start;
+  margin: 0 15%;
 `;
 
 export const LinkStyle = styled(Link)`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  margin: 10px;
+  margin-right: 1rem;
+  text-decoration: none;
+  :hover {
+    text-decoration: underline;
+  }
 `;

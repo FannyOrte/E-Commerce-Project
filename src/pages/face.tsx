@@ -19,7 +19,6 @@ const FacePage = () => {
   return (
     <div>
       <HeaderComponent />
-
       {products && (
         <ProductTableComponent products={products}></ProductTableComponent>
       )}
