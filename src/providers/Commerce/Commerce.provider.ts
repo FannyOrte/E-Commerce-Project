@@ -1,6 +1,6 @@
 import Commerce from "@chec/commerce.js";
-import { API_KEY } from "./Commers.utils";
-import { IProductMeta } from "./Commers.types";
+import { API_KEY } from "./Commerce.utils";
+import { IProductMeta } from "./Commerce.types";
 
 const commmerce = new Commerce(API_KEY);
 

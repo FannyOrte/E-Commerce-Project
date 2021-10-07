@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { getProducts } from "../providers/Commerce/Commers.provider";
-import { IProductMeta } from "../providers/Commerce//Commers.types";
+import { getProducts } from "../providers/Commerce/Commerce.provider";
+import { IProductMeta } from "../providers/Commerce/Commerce.types";
 import ProductTableComponent from "../components/ProductTable/ProductTable.component";
 
 const ProductsPage = () => {
