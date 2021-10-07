@@ -1,21 +1,16 @@
 import React from "react";
-import { ProductTableComponentArgs } from "./ProductTable.types";
+import { IProductTableComponentArgs } from "./ProductTable.types";
 import { DivStyle } from "./ProductTable.style";
 import CardComponent from "../Card/Card.component";
 
 const ProductTableComponent = ({
   products,
-}: ProductTableComponentArgs): JSX.Element => {
+}: IProductTableComponentArgs): JSX.Element => {
   return (
     <DivStyle>
-      {products.map(({ name, regularPrice, image, sku }) => {
+      {products.map(({ id, name, price, image }) => {
         return (
-          <CardComponent
-            key={sku}
-            name={name}
-            regularPrice={regularPrice}
-            image={image}
-          />
+          <CardComponent key={id} name={name} price={price} image={image} />
         );
       })}
     </DivStyle>
