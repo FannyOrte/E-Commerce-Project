@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { getProducts } from "../providers/Commerce/Commerce.provider";
 import { IProductMeta } from "../providers/Commerce/Commerce.types";
 import ProductTableComponent from "../components/ProductTable/ProductTable.component";
+import HeaderComponent from "../components/Header/Header.component";
 
-const ProductsPage = () => {
+const BodyPage = () => {
   const [products, setProducts] = useState<IProductMeta[] | null>(null);
 
   useEffect(() => {
     const sendRequest = async () => {
-      const result = await getProducts();
+      const result = await getProducts({ category: "body-products" });
       setProducts(result);
     };
 
@@ -17,6 +18,7 @@ const ProductsPage = () => {
 
   return (
     <div>
+      <HeaderComponent />
       {products && (
         <ProductTableComponent products={products}></ProductTableComponent>
       )}
@@ -24,4 +26,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default BodyPage;

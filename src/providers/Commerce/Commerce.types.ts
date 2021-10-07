@@ -4,3 +4,9 @@ export interface IProductMeta {
   price: string;
   image: string;
 }
+
+export type CategoryType = "body-products" | "facial-products";
+
+export interface IGetProductsArgs {
+  category: CategoryType;
+}
