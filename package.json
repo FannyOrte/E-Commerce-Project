@@ -20,6 +20,7 @@
     "@types/chec__commerce.js": "^2.7.5",
     "@types/styled-components": "^5.1.14",
     "babel-plugin-styled-components": "^1.13.2",
+    "styled-components": "5.3.1",
     "dotenv": "^8.6.0",
     "gatsby": "^3.13.1",
     "gatsby-plugin-styled-components": "^4.14.0",
