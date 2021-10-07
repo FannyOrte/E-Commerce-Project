@@ -12,7 +12,7 @@ export const CardContainerStyle = styled.div`
   box-sizing: border-box;
   padding: 0.7rem;
   border: 1px solid #ddd;
-  width: 20%;
+  width: 25%;
   @media screen and (max-width: ${breakpoints.me}) {
     width: 50%;
   }

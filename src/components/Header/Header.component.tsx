@@ -4,9 +4,8 @@ import { DivStyle, LinkStyle } from "./Header.styles";
 const HeaderComponent = () => {
   return (
     <DivStyle>
-      <LinkStyle to="/headphones">Headphones</LinkStyle>
-      <LinkStyle to="/laptops">Laptops</LinkStyle>
-      <LinkStyle to="/cameras">Cameras</LinkStyle>
+      <LinkStyle to="/face">Facial Products</LinkStyle>
+      <LinkStyle to="/body">Body Products</LinkStyle>
     </DivStyle>
   );
 };
