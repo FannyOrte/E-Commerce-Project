@@ -1,15 +1,8 @@
 import React from "react";
 import { LinkStyle } from "./Header.styles";
 import { IPureHeaderArgs } from "./Header.types";
-import {
-  AppBar,
-  Toolbar,
-  Box,
-  useTheme,
-  useMediaQuery,
-  IconButton,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { AppBar, Toolbar, Box, useTheme, useMediaQuery } from "@mui/material";
+import DrawerMenuComponent from "../DrawerMenu/DrawerMenu.component";
 
 const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
   return (
@@ -19,9 +12,7 @@ const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
           display={isMedium ? "flex" : "none"}
           justifyContent="space-between"
         >
-          <IconButton color="secondary">
-            <MenuIcon />
-          </IconButton>
+          <DrawerMenuComponent />
         </Box>
         <Box
           margin="0 15%"
