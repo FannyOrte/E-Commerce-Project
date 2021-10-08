@@ -19,9 +19,12 @@ export const SwipeableDrawerStyle = styled(SwipeableDrawer)`
 `;
 
 export const TextStyle = styled.p`
-  margin: 0 20px;
+  margin: 10px 20px;
   font-size: 1rem;
   letter-spacing: 2px;
   color: ${theme.palette.text.primary};
   text-transform: uppercase;
+  :hover {
+    text-decoration: underline;
+  }
 `;
