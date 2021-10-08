@@ -3,7 +3,7 @@ import theme from "../../globals/theme";
 import { Link } from "gatsby";
 
 export const LinkStyle = styled(Link)`
-  font-size: 1rem;
+  font-size: 13px;
   letter-spacing: 2px;
   color: ${theme.palette.text.primary};
   text-transform: uppercase;
