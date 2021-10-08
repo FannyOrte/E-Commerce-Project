@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../../globals/breakpoints";
+import theme from "../../globals/theme";
 
 export const ImgStyle = styled.img`
   max-width: 100%;
@@ -13,10 +13,10 @@ export const CardContainerStyle = styled.div`
   padding: 0.7rem;
   border: 1px solid #ddd;
   width: 25%;
-  @media screen and (max-width: ${breakpoints.me}) {
+  @media screen and (max-width: ${theme.breakpoints.values.md}px) {
     width: 50%;
   }
-  @media screen and (max-width: ${breakpoints.sm}) {
+  @media screen and (max-width: ${theme.breakpoints.values.sm}px) {
     width: 100%;
   }
 `;
