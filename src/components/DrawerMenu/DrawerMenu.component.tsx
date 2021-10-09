@@ -21,7 +21,7 @@ const DrawerMenuComponent = () => {
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
       >
-        <Box display="flex" justifyContent="flex-end" marginBottom="10px">
+        <Box display="flex" justifyContent="flex-end" margin="10px">
           <IconButton color="secondary" onClick={() => setOpen(false)}>
             <CloseIcon data-testid="drawer-close-icon" fontSize="large" />
           </IconButton>

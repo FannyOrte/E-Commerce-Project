@@ -5,20 +5,23 @@ import { AppBar, Toolbar, Box, useTheme, useMediaQuery } from "@mui/material";
 import DrawerMenuComponent from "../DrawerMenu/DrawerMenu.component";
 import useSiteMetaHook from "../../hooks/SiteMeta/useSiteMeta.hook";
 
-const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
+const PureHeaderComponent = () => {
   const site = useSiteMetaHook();
+  const theme = useTheme();
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+  const islarge = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <div>
       <AppBar color="primary">
         <Box
-          display={isMedium ? "none" : "flex"}
+          display={isMedium ? "flex" : "none"}
           justifyContent="space-between"
         >
           <DrawerMenuComponent />
         </Box>
         <Box
           margin="0 15%"
-          display={isMedium ? "flex" : "none"}
+          display={islarge ? "flex" : "none"}
           justifyContent="center"
         >
           {site.siteMetadata.menuLinks.map(({ label, linkPath, key }) => {
@@ -36,9 +39,7 @@ const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
 };
 
 const HeaderComponent = () => {
-  const theme = useTheme();
-  const isMedium = useMediaQuery(theme.breakpoints.up("md"));
-  return <PureHeaderComponent isMedium={isMedium} />;
+  return <PureHeaderComponent />;
 };
 
 export default HeaderComponent;
