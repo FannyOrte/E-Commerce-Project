@@ -1,4 +1,5 @@
-export interface IProductTableComponentArgs {
+export type ProductPageArgsType = {
+  slug: string;
   products: {
     id: string;
     name: string;
@@ -9,4 +10,4 @@ export interface IProductTableComponentArgs {
       url: string;
     };
   }[];
-}
+};

@@ -3,8 +3,10 @@ import { LinkStyle } from "./Header.styles";
 import { IPureHeaderArgs } from "./Header.types";
 import { AppBar, Toolbar, Box, useTheme, useMediaQuery } from "@mui/material";
 import DrawerMenuComponent from "../DrawerMenu/DrawerMenu.component";
+import useSiteMetaHook from "../../hooks/SiteMeta/useSiteMeta.hook";
 
 const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
+  const site = useSiteMetaHook();
   return (
     <div>
       <AppBar color="primary">
@@ -19,8 +21,13 @@ const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
           display={isMedium ? "none" : "flex"}
           justifyContent="center"
         >
-          <LinkStyle to="/face">Facial Products</LinkStyle>
-          <LinkStyle to="/body">Body Products</LinkStyle>
+          {site.siteMetadata.menuLinks.map(({ label, linkPath, key }) => {
+            return (
+              <LinkStyle to={linkPath} key={key}>
+                {label}
+              </LinkStyle>
+            );
+          })}
         </Box>
       </AppBar>
       <Toolbar />

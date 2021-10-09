@@ -4,9 +4,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "gatsby";
 import { SwipeableDrawerStyle, TextStyle } from "./DrawerMenu.styles";
+import useSiteMetaHook from "../../hooks/SiteMeta/useSiteMeta.hook";
 
 const DrawerMenuComponent = () => {
   const [open, setOpen] = useState(false);
+  const site = useSiteMetaHook();
 
   return (
     <div>
@@ -25,12 +27,13 @@ const DrawerMenuComponent = () => {
           </IconButton>
         </Box>
         <List>
-          <ListItem button component={Link} to="/face">
-            <TextStyle>Facial Products</TextStyle>
-          </ListItem>
-          <ListItem button component={Link} to="/body">
-            <TextStyle> Body Products</TextStyle>
-          </ListItem>
+          {site.siteMetadata.menuLinks.map(({ label, linkPath, key }) => {
+            return (
+              <ListItem button component={Link} to={linkPath} key={key}>
+                <TextStyle>{label}</TextStyle>
+              </ListItem>
+            );
+          })}
         </List>
       </SwipeableDrawerStyle>
     </div>

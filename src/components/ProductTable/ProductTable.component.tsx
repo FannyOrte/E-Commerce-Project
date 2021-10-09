@@ -8,11 +8,18 @@ const ProductTableComponent = ({
 }: IProductTableComponentArgs): JSX.Element => {
   return (
     <DivStyle>
-      {products.map(({ id, name, price, image }) => {
-        return (
-          <CardComponent key={id} name={name} price={price} image={image} />
-        );
-      })}
+      {products.map(
+        ({ id, name, price: { formatted_with_code }, image: { url } }) => {
+          return (
+            <CardComponent
+              key={id}
+              name={name}
+              price={formatted_with_code}
+              image={url}
+            />
+          );
+        }
+      )}
     </DivStyle>
   );
 };
