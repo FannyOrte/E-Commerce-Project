@@ -24,7 +24,4 @@ export const TextStyle = styled.p`
   letter-spacing: 2px;
   color: ${theme.palette.text.primary};
   text-transform: uppercase;
-  :hover {
-    text-decoration: underline;
-  }
 `;
