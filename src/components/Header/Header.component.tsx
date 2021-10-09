@@ -11,14 +11,14 @@ const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
     <div>
       <AppBar color="primary">
         <Box
-          display={isMedium ? "flex" : "none"}
+          display={isMedium ? "none" : "flex"}
           justifyContent="space-between"
         >
           <DrawerMenuComponent />
         </Box>
         <Box
           margin="0 15%"
-          display={isMedium ? "none" : "flex"}
+          display={isMedium ? "flex" : "none"}
           justifyContent="center"
         >
           {site.siteMetadata.menuLinks.map(({ label, linkPath, key }) => {
@@ -37,7 +37,7 @@ const PureHeaderComponent = ({ isMedium }: IPureHeaderArgs) => {
 
 const HeaderComponent = () => {
   const theme = useTheme();
-  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+  const isMedium = useMediaQuery(theme.breakpoints.up("md"));
   return <PureHeaderComponent isMedium={isMedium} />;
 };
 
