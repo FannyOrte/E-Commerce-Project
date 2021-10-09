@@ -23,7 +23,7 @@ module.exports = {
         ]
     },
     plugins: [
-        `gatsby-plugin-styled-components`, `gatsby-plugin-material-ui`, {
+        `gatsby-plugin-top-layout`, `gatsby-plugin-styled-components`, `gatsby-plugin-material-ui`, {
             resolve: '@chec/gatsby-source-chec',
             options: {
                 publicKey: process.env.GATSBY_API_KEY
