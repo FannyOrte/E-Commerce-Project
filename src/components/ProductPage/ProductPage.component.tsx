@@ -7,9 +7,9 @@ import { PageProps } from "gatsby";
 const ProductPageComponent = ({
   pageContext,
 }: PageProps<{}, ProductPageArgsType>) => {
+  console.log("product page");
   return (
     <div>
-      <HeaderComponent />
       <ProductTableComponent
         products={pageContext.products}
       ></ProductTableComponent>

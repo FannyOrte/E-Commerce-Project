@@ -1,11 +1,10 @@
 import React from "react";
 import { LinkStyle } from "./Header.styles";
-import { IPureHeaderArgs } from "./Header.types";
 import { AppBar, Toolbar, Box, useTheme, useMediaQuery } from "@mui/material";
 import DrawerMenuComponent from "../DrawerMenu/DrawerMenu.component";
 import useSiteMetaHook from "../../hooks/SiteMeta/useSiteMeta.hook";
 
-const PureHeaderComponent = () => {
+const HeaderComponent = () => {
   const site = useSiteMetaHook();
   const theme = useTheme();
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
@@ -36,10 +35,6 @@ const PureHeaderComponent = () => {
       <Toolbar />
     </div>
   );
-};
-
-const HeaderComponent = () => {
-  return <PureHeaderComponent />;
 };
 
 export default HeaderComponent;

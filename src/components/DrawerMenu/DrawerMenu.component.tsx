@@ -9,6 +9,7 @@ import useSiteMetaHook from "../../hooks/SiteMeta/useSiteMeta.hook";
 const DrawerMenuComponent = () => {
   const [open, setOpen] = useState(false);
   const site = useSiteMetaHook();
+  console.log("drawermenu component open: ", open);
 
   return (
     <div>
