@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { breakpoints } from "../../globals/breakpoints";
+import theme from "../../globals/theme";
 
 export const DivStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   margin: 0 15%;
-  @media screen and (max-width: ${breakpoints.me}) {
+  @media screen and (max-width: ${theme.breakpoints.values.md}px) {
     margin: 0;
   }
 `;
