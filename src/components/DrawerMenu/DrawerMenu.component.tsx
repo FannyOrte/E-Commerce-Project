@@ -13,7 +13,7 @@ const DrawerMenuComponent = () => {
   return (
     <div>
       <IconButton color="secondary" onClick={() => setOpen(true)}>
-        <MenuIcon />
+        <MenuIcon fontSize="large" />
       </IconButton>
       <SwipeableDrawerStyle
         anchor="left"
@@ -23,7 +23,7 @@ const DrawerMenuComponent = () => {
       >
         <Box display="flex" justifyContent="flex-end" margin="10px">
           <IconButton color="secondary" onClick={() => setOpen(false)}>
-            <CloseIcon data-testid="drawer-close-icon" fontSize="large" />
+            <CloseIcon fontSize="large" />
           </IconButton>
         </Box>
         <List>
