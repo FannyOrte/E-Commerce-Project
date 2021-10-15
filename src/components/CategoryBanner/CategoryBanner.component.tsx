@@ -20,7 +20,10 @@ const CategoryBannerComponent = () => {
       {site.siteMetadata.menuLinks.map(({ label, linkPath, key }) => {
         return (
           <LinkStyle to={linkPath} key={key}>
-            <ImgStyle src={key == "facial-products" ? face : body} />
+            <Box display="flex" justifyContent="center">
+              <ImgStyle src={key == "facial-products" ? face : body} />
+            </Box>
+
             <Box display="flex" justifyContent="center">
               <Typography variant="h6">{label}</Typography>
             </Box>
